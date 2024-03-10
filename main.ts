@@ -2,13 +2,13 @@ input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
     bMotorPower = !(bMotorPower)
 })
 input.onButtonEvent(Button.AB, input.buttonEventClick(), function () {
-    basic.showString(car4sender.printBuffer(car4sender.programmBlock(0, 180, 20)))
+    basic.showString(car4sender.printBuffer(car4sender.programmBlock(50, 90, 20)))
 })
 let bMotorPower = false
 lcd16x2rgb.initLCD(lcd16x2rgb.lcd16x2_eADDR(lcd16x2rgb.eADDR_LCD.LCD_16x2_x3E))
 car4sender.beimStart(240)
 bMotorPower = false
-loops.everyInterval(750, function () {
+loops.everyInterval(400, function () {
     if (bMotorPower) {
         basic.setLedColor(0x007fff)
     } else {
